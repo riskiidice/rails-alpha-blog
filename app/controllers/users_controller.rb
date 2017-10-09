@@ -1,9 +1,13 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit]
+  before_action :set_user, only: [:edit, :show]
 
   def new
     @user = User.new
   end
+
+def show
+  #code
+end
 
   def create
     @user = User.new(user_params)
